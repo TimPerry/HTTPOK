@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "HTOAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
+    
+    [NSApp setDelegate: [HTOAppDelegate new]];
     return NSApplicationMain(argc, (const char **)argv);
 }

@@ -7,6 +7,7 @@
 //
 
 #import "HTOAppDelegate.h"
+#import "HTOSiteList.h"
 
 @implementation HTOAppDelegate
 
@@ -16,6 +17,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    HTOSiteList *window = [[HTOSiteList alloc] initWithWindowNibName:@"HTOSiteList"];
+    [window showWindow:self];
+    
+    [self managedObjectContext];
     // Insert code here to initialize your application
 }
 

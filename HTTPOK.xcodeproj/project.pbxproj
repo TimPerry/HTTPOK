@@ -11,9 +11,17 @@
 		A5DC722C1742F44500D7FDB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5DC722A1742F44500D7FDB2 /* InfoPlist.strings */; };
 		A5DC722E1742F44500D7FDB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC722D1742F44500D7FDB2 /* main.m */; };
 		A5DC72321742F44500D7FDB2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A5DC72301742F44500D7FDB2 /* Credits.rtf */; };
-		A5DC72351742F44500D7FDB2 /* HTOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC72341742F44500D7FDB2 /* HTOAppDelegate.m */; };
-		A5DC72381742F44600D7FDB2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DC72361742F44600D7FDB2 /* MainMenu.xib */; };
 		A5DC723B1742F44600D7FDB2 /* HTTPOK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5DC72391742F44600D7FDB2 /* HTTPOK.xcdatamodeld */; };
+		A5DC72441742FA7400D7FDB2 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = A5DC72431742FA7400D7FDB2 /* add.png */; };
+		A5DC72461742FDF700D7FDB2 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = A5DC72451742FDF700D7FDB2 /* delete.png */; };
+		A5DC72491742FFA700D7FDB2 /* HTOURLChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC72481742FFA700D7FDB2 /* HTOURLChecker.m */; };
+		A5DC72521744315E00D7FDB2 /* HTOAddSite.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC72501744315E00D7FDB2 /* HTOAddSite.m */; };
+		A5DC72531744315E00D7FDB2 /* HTOAddSite.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DC72511744315E00D7FDB2 /* HTOAddSite.xib */; };
+		A5DC725C1744373100D7FDB2 /* HTOSiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC725A1744373100D7FDB2 /* HTOSiteList.m */; };
+		A5DC725D1744373100D7FDB2 /* HTOSiteList.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DC725B1744373100D7FDB2 /* HTOSiteList.xib */; };
+		A5DC728C17444ED000D7FDB2 /* Site.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC728B17444ED000D7FDB2 /* Site.m */; };
+		A5DC728F1744516400D7FDB2 /* HTOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC728E1744516400D7FDB2 /* HTOAppDelegate.m */; };
+		A5DC7293174583F300D7FDB2 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5DC7292174583F200D7FDB2 /* icon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +35,22 @@
 		A5DC722D1742F44500D7FDB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5DC722F1742F44500D7FDB2 /* HTTPOK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTTPOK-Prefix.pch"; sourceTree = "<group>"; };
 		A5DC72311742F44500D7FDB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		A5DC72331742F44500D7FDB2 /* HTOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTOAppDelegate.h; sourceTree = "<group>"; };
-		A5DC72341742F44500D7FDB2 /* HTOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTOAppDelegate.m; sourceTree = "<group>"; };
-		A5DC72371742F44600D7FDB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A5DC723A1742F44600D7FDB2 /* HTTPOK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HTTPOK.xcdatamodel; sourceTree = "<group>"; };
+		A5DC72431742FA7400D7FDB2 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add.png; path = ../add.png; sourceTree = "<group>"; };
+		A5DC72451742FDF700D7FDB2 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = ../delete.png; sourceTree = "<group>"; };
+		A5DC72471742FFA700D7FDB2 /* HTOURLChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOURLChecker.h; sourceTree = "<group>"; };
+		A5DC72481742FFA700D7FDB2 /* HTOURLChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOURLChecker.m; sourceTree = "<group>"; };
+		A5DC724F1744315E00D7FDB2 /* HTOAddSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOAddSite.h; sourceTree = "<group>"; };
+		A5DC72501744315E00D7FDB2 /* HTOAddSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOAddSite.m; sourceTree = "<group>"; };
+		A5DC72511744315E00D7FDB2 /* HTOAddSite.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOAddSite.xib; sourceTree = "<group>"; };
+		A5DC72591744373100D7FDB2 /* HTOSiteList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOSiteList.h; sourceTree = "<group>"; };
+		A5DC725A1744373100D7FDB2 /* HTOSiteList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOSiteList.m; sourceTree = "<group>"; };
+		A5DC725B1744373100D7FDB2 /* HTOSiteList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTOSiteList.xib; sourceTree = "<group>"; };
+		A5DC728A17444ED000D7FDB2 /* Site.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Site.h; sourceTree = "<group>"; };
+		A5DC728B17444ED000D7FDB2 /* Site.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Site.m; sourceTree = "<group>"; };
+		A5DC728D1744516400D7FDB2 /* HTOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTOAppDelegate.h; sourceTree = "<group>"; };
+		A5DC728E1744516400D7FDB2 /* HTOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTOAppDelegate.m; sourceTree = "<group>"; };
+		A5DC7292174583F200D7FDB2 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +68,7 @@
 		A5DC72151742F44500D7FDB2 = {
 			isa = PBXGroup;
 			children = (
+				A5DC7292174583F200D7FDB2 /* icon.icns */,
 				A5DC72271742F44500D7FDB2 /* HTTPOK */,
 				A5DC72201742F44500D7FDB2 /* Frameworks */,
 				A5DC721F1742F44500D7FDB2 /* Products */,
@@ -84,10 +105,13 @@
 		A5DC72271742F44500D7FDB2 /* HTTPOK */ = {
 			isa = PBXGroup;
 			children = (
-				A5DC72331742F44500D7FDB2 /* HTOAppDelegate.h */,
-				A5DC72341742F44500D7FDB2 /* HTOAppDelegate.m */,
-				A5DC72361742F44600D7FDB2 /* MainMenu.xib */,
-				A5DC72391742F44600D7FDB2 /* HTTPOK.xcdatamodeld */,
+				A5DC728D1744516400D7FDB2 /* HTOAppDelegate.h */,
+				A5DC728E1744516400D7FDB2 /* HTOAppDelegate.m */,
+				A5DC7258174431DB00D7FDB2 /* Resources */,
+				A5DC7257174431BE00D7FDB2 /* Classes */,
+				A5DC7256174431AA00D7FDB2 /* Controllers */,
+				A5DC72551744319000D7FDB2 /* Models */,
+				A5DC72541744318B00D7FDB2 /* Views */,
 				A5DC72281742F44500D7FDB2 /* Supporting Files */,
 			);
 			path = HTTPOK;
@@ -103,6 +127,54 @@
 				A5DC72301742F44500D7FDB2 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5DC72541744318B00D7FDB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5DC72511744315E00D7FDB2 /* HTOAddSite.xib */,
+				A5DC725B1744373100D7FDB2 /* HTOSiteList.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A5DC72551744319000D7FDB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5DC728A17444ED000D7FDB2 /* Site.h */,
+				A5DC728B17444ED000D7FDB2 /* Site.m */,
+				A5DC72391742F44600D7FDB2 /* HTTPOK.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A5DC7256174431AA00D7FDB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5DC72591744373100D7FDB2 /* HTOSiteList.h */,
+				A5DC725A1744373100D7FDB2 /* HTOSiteList.m */,
+				A5DC724F1744315E00D7FDB2 /* HTOAddSite.h */,
+				A5DC72501744315E00D7FDB2 /* HTOAddSite.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A5DC7257174431BE00D7FDB2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5DC72471742FFA700D7FDB2 /* HTOURLChecker.h */,
+				A5DC72481742FFA700D7FDB2 /* HTOURLChecker.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A5DC7258174431DB00D7FDB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5DC72451742FDF700D7FDB2 /* delete.png */,
+				A5DC72431742FA7400D7FDB2 /* add.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +231,11 @@
 			files = (
 				A5DC722C1742F44500D7FDB2 /* InfoPlist.strings in Resources */,
 				A5DC72321742F44500D7FDB2 /* Credits.rtf in Resources */,
-				A5DC72381742F44600D7FDB2 /* MainMenu.xib in Resources */,
+				A5DC72441742FA7400D7FDB2 /* add.png in Resources */,
+				A5DC72461742FDF700D7FDB2 /* delete.png in Resources */,
+				A5DC72531744315E00D7FDB2 /* HTOAddSite.xib in Resources */,
+				A5DC725D1744373100D7FDB2 /* HTOSiteList.xib in Resources */,
+				A5DC7293174583F300D7FDB2 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +247,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5DC722E1742F44500D7FDB2 /* main.m in Sources */,
-				A5DC72351742F44500D7FDB2 /* HTOAppDelegate.m in Sources */,
 				A5DC723B1742F44600D7FDB2 /* HTTPOK.xcdatamodeld in Sources */,
+				A5DC72491742FFA700D7FDB2 /* HTOURLChecker.m in Sources */,
+				A5DC72521744315E00D7FDB2 /* HTOAddSite.m in Sources */,
+				A5DC725C1744373100D7FDB2 /* HTOSiteList.m in Sources */,
+				A5DC728C17444ED000D7FDB2 /* Site.m in Sources */,
+				A5DC728F1744516400D7FDB2 /* HTOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,14 +273,6 @@
 				A5DC72311742F44500D7FDB2 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		A5DC72361742F44600D7FDB2 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5DC72371742F44600D7FDB2 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -308,6 +380,7 @@
 				A5DC72401742F44600D7FDB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
