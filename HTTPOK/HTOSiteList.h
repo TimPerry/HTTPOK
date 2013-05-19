@@ -11,16 +11,26 @@
 #import "HTOAppDelegate.h"
 #import "HTOAddSite.h"
 
-@interface HTOSiteList : NSWindowController <NSTableViewDelegate, NSTableViewDataSource, HTOURLCheckerDelegate> {
+@class HTOAddSite;
+@interface HTOSiteList : NSWindowController <NSTableViewDelegate, NSTableViewDataSource, NSToolbarDelegate, NSUserNotificationCenterDelegate, HTOURLCheckerDelegate> {
 
+    // Data vars
     NSMutableArray *_sites;
-    
+    HTOURLChecker *_urlChecker;
+
+    // IBOutlets
     HTOAddSite *_addSiteWindow;
-    NSTableView *siteList;
+    NSTableView *_siteList;
+
 }
 
-@property (nonatomic) IBOutlet NSTableView *siteList;
+@property (retain,nonatomic) IBOutlet NSTableView *_siteList;
 
 -(void) checkURLs;
+-(BOOL) setupSiteList;
+-(void) notifyUserOfOffline:(Site*) site;
+
+-(IBAction) addSite:(id)sender;
+-(IBAction) deleteSite:(id)sender;
 
 @end

@@ -10,14 +10,19 @@
 #import "Site.h"
 #import "HTOAppDelegate.h"
 
+@class HTOSiteList;
 @interface HTOAddSite : NSWindowController {
     
     NSTextField *siteName;
     NSTextField *siteURL;
+    
+    HTOSiteList *siteListWindow;
         
 }
-@property (nonatomic) IBOutlet NSTextField *siteName;
-@property (nonatomic) IBOutlet NSTextField *siteURL;
+
+@property (retain, nonatomic) HTOSiteList *siteListWindow;
+@property (retain, nonatomic) IBOutlet NSTextField *siteName;
+@property (retain, nonatomic) IBOutlet NSTextField *siteURL;
 
 -(IBAction) saveSite:(id)sender;
 

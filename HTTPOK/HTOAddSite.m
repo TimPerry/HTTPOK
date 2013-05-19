@@ -10,45 +10,51 @@
 
 @implementation HTOAddSite
 
-@synthesize siteName, siteURL;
-
-- (id)initWithWindow:(NSWindow *)window {
-
-    self = [super initWithWindow:window];
-    return self;
-    
-}
-
-- (void)windowDidLoad {
-    [super windowDidLoad];
-}
+@synthesize siteName, siteURL, siteListWindow;
 
 -(IBAction) saveSite:(id)sender {
     
     if ( [[siteName stringValue] length] > 0 && [[siteURL stringValue] length] > 0 ) {
     
-        NSManagedObjectContext *context = [(HTOAppDelegate *)[[NSApplication sharedApplication] delegate] managedObjectContext];
+        HTOAppDelegate *delegate = (HTOAppDelegate*)[[NSApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [delegate managedObjectContext];
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Site" inManagedObjectContext: context];
         
         Site *newSite = [[Site alloc] initWithEntity:entity insertIntoManagedObjectContext: context];
         
-        [newSite setName:[siteName stringValue]];
-        [newSite setUrl:[siteURL stringValue]];
+        NSString *url = [siteURL stringValue];
+
+        if ( [url rangeOfString:@"http"].location == NSNotFound ) {
+            url = [NSString stringWithFormat:@"http://%@", url];
+        }
         
+        [newSite setUrl: url];
+        [newSite setName:[siteName stringValue]];
+
         [context processPendingChanges];
         
         NSError *error = nil;
-        if(![ context save:&error]){
-            //Handle error
-        }
-        
-        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        [request setEntity:entity];
-        
-        NSArray *array = [context executeFetchRequest:request error:&error];
-        
-        for( Site *site in array ) {
-            NSLog(@"Sitename: %@", [site name]);
+        if([ context save:&error]){
+            
+            if ( [[self siteListWindow] setupSiteList] ) {
+
+                [[self siteName] setStringValue:@""];
+                [[self siteURL] setStringValue:@""];
+                
+                [[self siteURL] resignFirstResponder];
+                [[self window] setInitialFirstResponder: [self siteName]];
+                
+                [[self window] close];
+                
+            }
+            
+        } else {
+            
+            NSAlert *alert = [NSAlert alertWithMessageText:@"Oh noes!"
+                                             defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat: @"Failed to add the site, please try again. If problem persists, please report."];
+            
+            [alert runModal];
+            
         }
         
     } else {

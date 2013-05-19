@@ -7,8 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "HTOSiteList.h"
 
-@interface HTOAppDelegate : NSObject <NSApplicationDelegate>
+@class HTOSiteList;
+@interface HTOAppDelegate : NSObject <NSApplicationDelegate> {
+    
+    HTOSiteList *window;
+    
+}
+
+@property(retain,nonatomic) HTOSiteList *window;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

@@ -11,7 +11,9 @@
 
 int main(int argc, char *argv[])
 {
+
+    HTOAppDelegate *delegate = [[HTOAppDelegate alloc] init];
+    [[NSApplication sharedApplication] setDelegate:delegate];
+    [NSApp run];
     
-    [NSApp setDelegate: [HTOAppDelegate new]];
-    return NSApplicationMain(argc, (const char **)argv);
 }

@@ -14,7 +14,7 @@
 
 @interface HTOURLChecker : NSObject <NSURLConnectionDelegate> {
     
-    NSString *_url;
+    NSString *url;
     NSMutableData *_receivedData;
     
 }

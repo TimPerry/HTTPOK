@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A58F11EA1748EF9D005225C0 /* alert1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A58F11E91748EF9D005225C0 /* alert1.mp3 */; };
+		A5A40B5C1746E3B7006846D3 /* status_error.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A40B5A1746E3B7006846D3 /* status_error.png */; };
+		A5A40B5D1746E3B7006846D3 /* status_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A40B5B1746E3B7006846D3 /* status_ok.png */; };
 		A5DC72221742F44500D7FDB2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DC72211742F44500D7FDB2 /* Cocoa.framework */; };
 		A5DC722C1742F44500D7FDB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5DC722A1742F44500D7FDB2 /* InfoPlist.strings */; };
 		A5DC722E1742F44500D7FDB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DC722D1742F44500D7FDB2 /* main.m */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A58F11E91748EF9D005225C0 /* alert1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert1.mp3; sourceTree = "<group>"; };
+		A5A40B5A1746E3B7006846D3 /* status_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_error.png; sourceTree = SOURCE_ROOT; };
+		A5A40B5B1746E3B7006846D3 /* status_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_ok.png; sourceTree = SOURCE_ROOT; };
 		A5DC721E1742F44500D7FDB2 /* HTTPOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DC72211742F44500D7FDB2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A5DC72241742F44500D7FDB2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -171,6 +177,9 @@
 		A5DC7258174431DB00D7FDB2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A58F11E91748EF9D005225C0 /* alert1.mp3 */,
+				A5A40B5A1746E3B7006846D3 /* status_error.png */,
+				A5A40B5B1746E3B7006846D3 /* status_ok.png */,
 				A5DC72451742FDF700D7FDB2 /* delete.png */,
 				A5DC72431742FA7400D7FDB2 /* add.png */,
 			);
@@ -236,6 +245,9 @@
 				A5DC72531744315E00D7FDB2 /* HTOAddSite.xib in Resources */,
 				A5DC725D1744373100D7FDB2 /* HTOSiteList.xib in Resources */,
 				A5DC7293174583F300D7FDB2 /* icon.icns in Resources */,
+				A5A40B5C1746E3B7006846D3 /* status_error.png in Resources */,
+				A5A40B5D1746E3B7006846D3 /* status_ok.png in Resources */,
+				A58F11EA1748EF9D005225C0 /* alert1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

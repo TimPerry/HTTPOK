@@ -16,10 +16,10 @@
 
 -(void) check {
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: _url ] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval: REQUEST_TIMEOUT];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: url ] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval: REQUEST_TIMEOUT];
     NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     if ( ! connection ) {
-        [delegate URLCheckedWithStatus: 404 andURL:_url];
+        [delegate URLCheckedWithStatus: 404 andURL: url];
     }
     
 }
@@ -27,15 +27,23 @@
 - (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse*)response {
  
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
-    [delegate URLCheckedWithStatus: [httpResponse statusCode] andURL: [[response URL] absoluteString]];
+    NSString *request_url = [[[connection originalRequest] URL] absoluteString];
+    [delegate URLCheckedWithStatus: [httpResponse statusCode] andURL: request_url];
 
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+
+    NSString *request_url = [[[connection originalRequest] URL] absoluteString];
+    [delegate URLCheckedWithStatus: 404 andURL: request_url];
+    
 }
 
 -(id) initWithURL:(NSString*) urlStr {
     
     self = [super init];
     if ( self ) {
-        _url = urlStr;
+        url = urlStr;
     }
     
     return self;

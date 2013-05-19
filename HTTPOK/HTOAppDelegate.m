@@ -7,21 +7,22 @@
 //
 
 #import "HTOAppDelegate.h"
-#import "HTOSiteList.h"
 
 @implementation HTOAppDelegate
 
+@synthesize window = window;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    HTOSiteList *window = [[HTOSiteList alloc] initWithWindowNibName:@"HTOSiteList"];
-    [window showWindow:self];
-    
+
     [self managedObjectContext];
-    // Insert code here to initialize your application
+
+    window = [[HTOSiteList alloc] initWithWindowNibName:@"HTOSiteList"];
+    [window showWindow:self];
+
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.applicious.HTTPOK" in the user's Application Support directory.
@@ -41,7 +42,9 @@
 	
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"HTTPOK" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    
     return _managedObjectModel;
+    
 }
 
 // Returns the persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. (The directory for the store is created, if necessary.)
@@ -137,6 +140,7 @@
     if (![[self managedObjectContext] save:&error]) {
         [[NSApplication sharedApplication] presentError:error];
     }
+    
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
@@ -183,6 +187,17 @@
     }
 
     return NSTerminateNow;
+}
+
+// ====================
+//  DELEGATE FUNCTIONS
+// ===================
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication*)theApplication hasVisibleWindows:(BOOL)flag {
+    
+    [window showWindow: self];
+    return TRUE;
+    
 }
 
 @end
